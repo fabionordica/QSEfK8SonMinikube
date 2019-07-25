@@ -1,12 +1,3 @@
-# **Qlik Sense Enterprise for Kubernetes em Minikube** (Ambiente de Teste)
-
-## Instalação do Qlik Sense Enterprise for Kubernetes
-
-### Criação do YAML com configurações para o Qlik Sense Enterprise for Kubernetes
-
-Crie o arquivo [values.yaml](YAML/values.yaml) com o conteúdo abaixo e salve no diretório C:\Minikube ou ~\Minikube
-
-```yaml
 #Esta configuração ativa o modo desenvolvimento e inclui uma instalação local de MongoDB
 devMode:
   enabled: true
@@ -54,54 +45,3 @@ management-console:
 edge-auth:
   oidc:
     redirectUri: https://elastic.example:32443/login/callback
-```
-
-### Instalação do Qlik Sense
-
-Adicione o repositório da Qlik no helm
-
-```sh
-helm repo add qlik https://qlik.bintray.com/stable
-```
-
-Atualize os repositórios do helm
-
-```sh
-helm repo update
-```
-
-Instale o pacote inicial do Qlik Sense
-
-```sh
-helm install --name qliksense-init qlik/qliksense-init
-```
-
-Instale o Qlik Sense utilizando o values.yaml que foi criado anteriormente
-
-```sh
-helm install -n qliksense qlik/qliksense -f values.yaml
-```
-
-### Adicione o IP do Minikube no arquivo de hosts
-
-Para obter o IP do Minikube execute o comando:
-
-```sh
-minikube ip
-```
-
-Localize o arquivo de hosts e faça a inclusão do IP do Minikube para o DNS elastic.example.
-
-A entrada deve ser feita conforme exemplo:
-35.247.193.178 elastic.example
-
-Windows - %SYSTEMROOT%\System32\drivers\etc\hosts
-
-Unix - /etc/hosts
-
-
-### [Próximo -> Pós instalação](PINSTALL.md)
-
-### [Voltar <- Provisionando o ambiente](PROVISIONING.md)
-
-### [Tabela de conteúdo](README.md)

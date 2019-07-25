@@ -36,7 +36,7 @@ Crie o diretório C:\Minikube ou ~\Minikube.
 
 ### RBAC (role-based access control)
 
-Crie o arquivo rbac-config.yaml com o seguinte conteúdo abaixo e salve no diretório criado anteriormente.
+Crie o arquivo [rbac-config.yaml](YAML/rbac-config.yaml) com o seguinte conteúdo abaixo e salve no diretório criado anteriormente.
 
 ```yaml
 apiVersion: v1
