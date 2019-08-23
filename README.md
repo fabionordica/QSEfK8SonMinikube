@@ -1,5 +1,9 @@
 # **Qlik Sense Enterprise for Kubernetes em Minikube** (Ambiente de Teste)
 
+
+## YouTube
+https://www.youtube.com/watch?v=iCM8QfRXSoE
+
 ## Objetivo
 Este documento foi criado para auxiliar a criação de um ambiente de teste em Minikube e utilizando o usuário de exemplo _harley@qlik.example_.
 
